@@ -1,3 +1,3 @@
-View the page on https://kevinvg207.github.io/rr-rooms/
+View the page on https://sdkpack-dev.github.io/sdkpack-rooms/
 
-Simple webpage that displays the Retro Rewind rooms from the API endpoint http://zplwii.xyz/api/groups
+Simple webpage that displays the SDKPack rooms from the API endpoint http://sdkpack.net/api/groups
