@@ -51,9 +51,9 @@
         <table>
             <tbody id="tablebody"></tbody>
         </table>
-        <p><a href="https://wiki.tockdom.com/wiki/Retro_Rewind" target="_blank">Retro Rewind</a> is a custom track distribution for Mario Kart Wii, created by ZPL.</p>
+        <p><a href="https://wiki.tockdom.com/wiki/Retro_Rewind" target="_blank">SDKPack</a> is a custom track distribution for Mario Kart Wii, created by Kawaii Shadowii, Dokan and KevinVG207.</p>
         <p>This webpage is created by <a href="https://github.com/KevinVG207" target="_blank">KevinVG207</a></p>
-        <p>Room data taken from <a href="http://rwfc.net/api/groups" target="_blank">this API endpoint</a>.</p>
+        <p>Room data taken from <a href="http://sdkpack.net/api/groups" target="_blank">this API endpoint</a>.</p>
         <p><a href="https://wiki.tockdom.com/wiki/CTMKF" target="_blank">Chadderz's Terrible Mario Kart Font</a> is used for the Mii name special symbols.</p>
         <script type="text/javascript">
             let HISTORY_TIMER = null;
@@ -68,32 +68,7 @@
 
             // Source: https://github.com/patchzyy/WheelWizard
             const ROOM_TYPES = {
-                "vs_10": "Retro VS",
-                "vs_11": "Retro TT",
-                "vs_12": "Retro 200cc",
-                "vs_20": "CT VS",
-                "vs_21": "CT TT",
-                "vs_22": "CT 200cc",
-                "vs_668": "CTGP-C",
-                "vs_69": "Insane Kart",
-                "vs_751": "Versus",
-                "vs_-1": "Regular",
-                "vs": "Regular",
-                "vs_69": "IKW Default",
-                "vs_70": "IKW Ultras VS",
-                "vs_71": "IKW Countdown",
-                "vs_72": "IKW Bob-omb Blast",
-                "vs_73": "IKW Infinite Acceleration",
-                "vs_74": "IKW Banana Slip",
-                "vs_75": "IKW Random Items",
-                "vs_76": "IKW Unfair Items",
-                "vs_77": "IKW Blue Shell Madness",
-                "vs_78": "IKW Mushroom Dash",
-                "vs_79": "IKW Bumper Karts",
-                "vs_80": "IKW Item Rampage",
-                "vs_81": "IKW Item Rain",
-                "vs_82": "IKW Shell Break",
-                "vs_83": "IKW Riibalanced Stats"
+                "vs": "Regular"
             };
 
             function on_history_change() {
@@ -622,10 +597,10 @@
                     history_indicator.style.display = "none";
                 }
                 
-                const response = await fetch("https://umapyoi.net/api/v1/rr-rooms" + timestamp_part);
+                const response = await fetch("https://umapyoi.net/api/v1/sdkpack-rooms" + timestamp_part);
     
                 if (!response.ok){
-                    console.log("Error fetching room data from zplwii.xyz");
+                    console.log("Error fetching room data");
                     return;
                 }
 
@@ -904,7 +879,7 @@
             }
             if (document.addEventListener)
                 document.addEventListener('DOMContentLoaded', on_load, false)
-            else window.onload = fetch_rooms
+            else window.onload = on_load
         </script>
     </body>
 </html>
