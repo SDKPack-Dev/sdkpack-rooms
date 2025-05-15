@@ -48,6 +48,9 @@
         <div id="not-found-container">
             Specified room has closed or does not exist.
         </div>
+        <div id="no-rooms-container">
+            Currently no rooms to show.
+        </div>
         <table>
             <tbody id="tablebody"></tbody>
         </table>
@@ -845,12 +848,17 @@
                 }
 
                 if (room_not_found){
+                    if (!filter_room) {
+                        document.querySelector("#no-rooms-container").style.display = "block";
+                    } else {
+                        document.querySelector("#not-found-container").style.display = "block";
+                    }
                     document.querySelector("#top-container").style.display = "none";
-                    document.querySelector("#not-found-container").style.display = "block";
                     return;
                 }
 
                 document.querySelector("#not-found-container").style.display = "none";
+                document.querySelector("#no-rooms-container").style.display = "none";
 
                 update_openhost_underline();
 

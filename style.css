@@ -83,7 +83,7 @@ th, td {
     font-size: 2rem;
 }
 
-#top-container, #not-found-container {
+#top-container, #not-found-container, #no-rooms-container {
     display: none;
     font-weight: bold;
     font-size: 1.5rem;
